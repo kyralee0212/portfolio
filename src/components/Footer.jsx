@@ -67,8 +67,8 @@ export default function Footer() {
             Built in 2026 • Yun Lee crafting UI Design though Figma
           </p>
           <div className="flex gap-6">
-            <a href="#" className="font-['Inter',sans-serif] font-normal text-[12px] leading-[16px]" style={{ color: '#94a3b8' }}>Privacy Policy</a>
-            <a href="#" className="font-['Inter',sans-serif] font-normal text-[12px] leading-[16px]" style={{ color: '#94a3b8' }}>Terms of Service</a>
+            <a href="#privacy-policy" className="font-['Inter',sans-serif] font-normal text-[12px] leading-[16px]" style={{ color: '#94a3b8' }}>Privacy Policy</a>
+            <a href="#terms-of-service" className="font-['Inter',sans-serif] font-normal text-[12px] leading-[16px]" style={{ color: '#94a3b8' }}>Terms of Service</a>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useFadeUp } from '../hooks/useFadeUp'
 import {
   imgImage1, imgImage3, imgImage4,
   imgImage5, imgImage6, imgImage7, imgImage8, imgImage9,
@@ -130,12 +131,13 @@ function ProjectCard({ title, subtitle, description, images, imgPosition, href }
 }
 
 export default function AllWorks() {
+  const [ref, visible] = useFadeUp()
   return (
     <section className="bg-white" style={{ paddingTop: '60px', paddingBottom: '40px' }}>
-      <div className="section-container">
+      <div ref={ref} className={`section-container fade-up${visible ? ' visible' : ''}`}>
         {/* Heading */}
         <div className="mb-8">
-          <h2 className="font-['Heebo',sans-serif] font-black text-[36px] leading-[40px]" style={{ color: '#0f172a' }}>
+          <h2 className="font-['Heebo',sans-serif] font-semibold text-[36px] leading-[40px]" style={{ color: '#0f172a' }}>
             Selected Projects
           </h2>
           <p className="font-['Heebo',sans-serif] font-normal text-[16px] leading-[24px] mt-1" style={{ color: '#475569' }}>
