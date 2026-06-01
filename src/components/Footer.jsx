@@ -44,16 +44,40 @@ export default function Footer() {
               Follow Me
             </h4>
             <div className="flex gap-4">
-              {[imgContainer3, imgContainer4, imgContainer5].map((src, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="flex items-center justify-center rounded-[8px] flex-shrink-0"
-                  style={{ width: '40px', height: '40px', background: '#f1f5f9' }}
-                >
-                  <img src={src} alt="" className="w-5 h-5 object-contain" />
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/kyra_leeee"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center rounded-[8px] flex-shrink-0"
+                style={{ width: '40px', height: '40px', background: '#f1f5f9', color: '#64748b', transition: 'background 0.18s, color 0.18s, transform 0.12s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#e2377a'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'scale(1)'; }}
+                onMouseDown={e => { e.currentTarget.style.background = '#c4185e'; e.currentTarget.style.transform = 'scale(0.9)'; }}
+                onMouseUp={e => { e.currentTarget.style.background = '#e2377a'; e.currentTarget.style.transform = 'scale(1)'; }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="2" />
+                  <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yun-lee-0212/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center rounded-[8px] flex-shrink-0"
+                style={{ width: '40px', height: '40px', background: '#f1f5f9', color: '#64748b', transition: 'background 0.18s, color 0.18s, transform 0.12s' }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#0a66c2'; e.currentTarget.style.color = '#fff'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#f1f5f9'; e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'scale(1)'; }}
+                onMouseDown={e => { e.currentTarget.style.background = '#004d96'; e.currentTarget.style.transform = 'scale(0.9)'; }}
+                onMouseUp={e => { e.currentTarget.style.background = '#0a66c2'; e.currentTarget.style.transform = 'scale(1)'; }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="2" y="9" width="4" height="13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="4" cy="4" r="2" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
