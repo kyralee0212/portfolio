@@ -16,9 +16,25 @@ import nuggetSprite8 from '../assets/images/nugget-sprite8.png'
 import cinematicPreview from '../assets/images/nugget-cinematic-preview.png'
 import analyticsGraph from '../assets/images/nugget-analytics-graph.svg'
 import trendArrow from '../assets/images/nugget-trend-arrow.svg'
+import card1 from '../assets/images/nugget-card1.png'
 import pop1 from '../assets/images/nugget-pop1.png'
 import recycleRanking1 from '../assets/images/nugget-recycle-ranking1.png'
 import withdraw1 from '../assets/images/nugget-withdraw1.png'
+import badge1 from '../assets/images/nugget-badge1.png'
+import badge2 from '../assets/images/nugget-badge2.png'
+import badge3 from '../assets/images/nugget-badge3.png'
+import counter from '../assets/images/nugget-counter.png'
+import arrowLeft from '../assets/images/nugget-arrow-left.png'
+import arrowRight from '../assets/images/nugget-arrow-right.png'
+import btnX from '../assets/images/nugget-btn-x.png'
+import btnCoin from '../assets/images/nugget-btn-coin.png'
+import inventory from '../assets/images/nugget-inventory.png'
+import treasure1 from '../assets/images/nugget-treasure1.png'
+import treasure2 from '../assets/images/nugget-treasure2.png'
+import btnDeposit from '../assets/images/nugget-btn-deposit.png'
+import btnWithdrawAction from '../assets/images/nugget-btn-withdraw-action.png'
+import iconEarning from '../assets/images/nugget-icon-earning.png'
+import iconLeader from '../assets/images/nugget-icon-leader.png'
 
 const uiEvolution = [
   {
@@ -156,18 +172,66 @@ export default function NuggetPage() {
       {/* In-game UI Elements */}
       <section className="section-container py-16">
         <h2 className="font-['Inter',sans-serif] font-bold text-[36px] text-center mb-2" style={{ color: '#e2e4f6' }}>In-game UI Elements</h2>
-        <p className="text-center text-[16px] mb-12" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
-        <div className="grid grid-cols-4 gap-4 mb-8">
-          {spriteImgs.map((src, i) => (
-            <img key={i} src={src} alt={`sprite ${i + 1}`} className="rounded-[18px] w-full object-cover" style={{ aspectRatio: '1/1' }} />
-          ))}
-        </div>
-        <div className="grid grid-cols-2 gap-6">
-          <img src={pop1} alt="Pop UI" className="rounded-[18px] w-full object-cover" />
-          <img src={recycleRanking1} alt="Recycle Ranking" className="rounded-[18px] w-full object-cover" />
-        </div>
-        <div className="mt-6">
-          <img src={withdraw1} alt="Withdraw UI" className="rounded-[18px] max-w-[500px] mx-auto block object-cover" />
+        <p className="text-center text-[16px] mb-10" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '45% 52%', gap: '3%', alignItems: 'start' }}>
+
+          {/* Left column */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {/* Sprite grid container */}
+            <div style={{ background: '#e5e7e9', borderRadius: 20, padding: 20 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
+                {spriteImgs.map((src, i) => (
+                  <img key={i} src={src} alt="" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', borderRadius: 8 }} />
+                ))}
+              </div>
+            </div>
+
+            {/* Row 1: badge 1 + nav controls + inventory */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <img src={badge1} alt="" style={{ height: 50, flexShrink: 0 }} />
+              <img src={counter} alt="" style={{ height: 28, flexShrink: 0 }} />
+              <img src={arrowLeft} alt="" style={{ height: 26, flexShrink: 0 }} />
+              <img src={arrowRight} alt="" style={{ height: 26, flexShrink: 0 }} />
+              <img src={btnX} alt="" style={{ height: 26, flexShrink: 0 }} />
+              <img src={btnCoin} alt="" style={{ height: 28, flexShrink: 0 }} />
+              <div style={{ flex: 1 }} />
+              <img src={inventory} alt="" style={{ height: 42, flexShrink: 0 }} />
+            </div>
+
+            {/* Row 2: badge 2 + treasure + deposit */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <img src={badge2} alt="" style={{ height: 50, flexShrink: 0 }} />
+              <img src={treasure2} alt="" style={{ height: 50, flexShrink: 0 }} />
+              <div style={{ flex: 1 }} />
+              <img src={btnDeposit} alt="" style={{ height: 36, flexShrink: 0 }} />
+            </div>
+
+            {/* Row 3: badge 3 + treasure + withdraw */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <img src={badge3} alt="" style={{ height: 50, flexShrink: 0 }} />
+              <img src={treasure1} alt="" style={{ height: 50, flexShrink: 0 }} />
+              <div style={{ flex: 1 }} />
+              <img src={btnWithdrawAction} alt="" style={{ height: 36, flexShrink: 0 }} />
+            </div>
+
+            {/* Bottom: icons + withdraw popup side by side */}
+            <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8, flexShrink: 0 }}>
+                <img src={iconEarning} alt="" style={{ width: 56 }} />
+                <img src={iconLeader} alt="" style={{ width: 56 }} />
+              </div>
+              <img src={withdraw1} alt="" style={{ flex: 1, borderRadius: 12, minWidth: 0 }} />
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <img src={card1} alt="Card listing" style={{ width: '100%', borderRadius: 12 }} />
+            <img src={pop1} alt="Pop UI" style={{ width: '100%', borderRadius: 12 }} />
+            <img src={recycleRanking1} alt="Recycle Ranking" style={{ width: '100%', borderRadius: 12 }} />
+          </div>
+
         </div>
       </section>
 
