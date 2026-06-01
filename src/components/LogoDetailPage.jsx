@@ -1,5 +1,13 @@
 import { useLayoutEffect, useState } from 'react'
 import kawaHeroNew from '../assets/images/kawa-hero-new.png'
+import kawaLogoImg from '../assets/images/kawa-logo.png'
+import kawaSketch1Img from '../assets/images/kawa-sketch1.png'
+import kawaSketch2Img from '../assets/images/kawa-sketch2.png'
+import kawaColor1Img from '../assets/images/kawa-color1.png'
+import kawaColor2Img from '../assets/images/kawa-color2.png'
+import kawaFinal1Img from '../assets/images/kawa-final1.png'
+import kawaFinal2Img from '../assets/images/kawa-final3.png'
+import kawaFinal3Img from '../assets/images/kawa-final4.png'
 import blsIconColor from '../assets/bls-icon-color.svg'
 import blsLogoSloganWhite from '../assets/bls-logo-slogan-white.svg'
 import blsSketchWeb1 from '../assets/bls-sketch-web1.png'
@@ -9,14 +17,14 @@ import blsEmailSig from '../assets/images/Email signiture.png'
 
 // ── Kawa Ramen ──────────────────────────────────────────────────────────────
 const kawaHero = kawaHeroNew
-const kawaLogo = 'https://www.figma.com/api/mcp/asset/4e81bd9a-6fe4-4e81-b2e3-b56c68ebb750'
-const kawaSketch1 = 'https://www.figma.com/api/mcp/asset/7826942d-4aec-42e4-a9d6-6e337661e983'
-const kawaSketch2 = 'https://www.figma.com/api/mcp/asset/cbd1327b-bf95-408d-82fc-a98241aa9645'
-const kawaColor1 = 'https://www.figma.com/api/mcp/asset/5d446eb7-6685-4ff4-af69-4709cf11fc5b'
-const kawaColor2 = 'https://www.figma.com/api/mcp/asset/661c3d54-e74a-48ed-aa05-d0ac02454f09'
-const kawaFinal1 = 'https://www.figma.com/api/mcp/asset/bb2ec78d-283d-4175-8053-b6c1cba29d62'
-const kawaFinal2 = 'https://www.figma.com/api/mcp/asset/2982cee9-50ca-4510-bfd0-05b5eae02df5'
-const kawaFinal3 = 'https://www.figma.com/api/mcp/asset/484815e4-f314-4457-81ba-d9b62747d221'
+const kawaLogo = kawaLogoImg
+const kawaSketch1 = kawaSketch1Img
+const kawaSketch2 = kawaSketch2Img
+const kawaColor1 = kawaColor1Img
+const kawaColor2 = kawaColor2Img
+const kawaFinal1 = kawaFinal1Img
+const kawaFinal2 = kawaFinal2Img
+const kawaFinal3 = kawaFinal3Img
 
 // ── Ming Wei ─────────────────────────────────────────────────────────────────
 const mingHero = 'https://www.figma.com/api/mcp/asset/0628324c-1272-4321-aaaa-9c50f3123018'
