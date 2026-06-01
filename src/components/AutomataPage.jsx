@@ -33,6 +33,39 @@ const computerFrames = loadFrames(import.meta.glob('../assets/images/automata/7.
 const pushFrames     = loadFrames(import.meta.glob('../assets/images/automata/8.push/working/*.png',     { eager: true }))
 import interfaceIcons from '../assets/images/automata/interface_icons.png'
 import uiScreen1 from '../assets/images/automata/ui_screen1.png'
+import automataIcon1 from '../assets/images/automata/icon_1.png'
+import automataIcon2 from '../assets/images/automata/icon_2.png'
+import automataIcon3 from '../assets/images/automata/icon_3.png'
+import automataIcon4 from '../assets/images/automata/icon_4.png'
+import automataIcon5 from '../assets/images/automata/icon_5.png'
+import automataIcon6 from '../assets/images/automata/icon_6.png'
+import automataIcon7 from '../assets/images/automata/icon_7.png'
+import automataIcon8 from '../assets/images/automata/icon_8.png'
+import automataIcon9 from '../assets/images/automata/icon_9.png'
+import automataIcon10 from '../assets/images/automata/icon_10.png'
+import uiAuction from '../assets/images/automata/ui_auction.png'
+import uiToggleOff from '../assets/images/automata/ui_toggle_off.png'
+import uiToggleOn from '../assets/images/automata/ui_toggle_on.png'
+import uiBountyHover from '../assets/images/automata/ui_bounty_hover.png'
+import uiUpgradeIdle from '../assets/images/automata/ui_upgrade_idle.png'
+import uiUpgrade from '../assets/images/automata/ui_upgrade.png'
+import uiRedeemBar from '../assets/images/automata/ui_redeem_bar.png'
+import uiWithdrawNormal from '../assets/images/automata/ui_withdraw_normal.png'
+import uiDepositNormal from '../assets/images/automata/ui_deposit_normal.png'
+import uiBackN from '../assets/images/automata/ui_back_n.png'
+import uiNextN from '../assets/images/automata/ui_next_n.png'
+import uiCount from '../assets/images/automata/ui_count.png'
+import uiItemsCol from '../assets/images/automata/ui_items_col.png'
+import uiGuideN from '../assets/images/automata/ui_guide_n.png'
+import ui415 from '../assets/images/automata/ui_415.png'
+import uiRobotPanel from '../assets/images/automata/ui_robot_panel.png'
+import uiPlayN from '../assets/images/automata/ui_play_n.png'
+import uiUfo from '../assets/images/automata/ui_ufo.png'
+import uiFrame from '../assets/images/automata/ui_frame.png'
+import uiUnlockPanel from '../assets/images/automata/ui_unlock_panel.png'
+import uiDepositPanel from '../assets/images/automata/ui_deposit_panel.png'
+import uiLevelPanel from '../assets/images/automata/ui_level_panel.png'
+import uiLeaderboard from '../assets/images/automata/ui_leaderboard.png'
 import frame3 from '../assets/images/automata/frame_3.png'
 import arrowNext from '../assets/images/automata/arrow_next.png'
 import celestialPlanet from '../assets/images/automata/celestial_planet.png'
@@ -782,16 +815,8 @@ export default function AutomataPage() {
                 display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px',
               }}>
                 {[
-                  'https://www.figma.com/api/mcp/asset/fd80a330-19bf-458a-8d48-864aa7072fa9',
-                  'https://www.figma.com/api/mcp/asset/471c9a6c-1186-41e2-a9ef-19bbfcfbcb44',
-                  'https://www.figma.com/api/mcp/asset/4ee6f20f-754b-434a-92b4-56d77f6d85f7',
-                  'https://www.figma.com/api/mcp/asset/4f4af85a-365f-46db-a61b-31f3cb025404',
-                  'https://www.figma.com/api/mcp/asset/9ab21b3a-5106-4177-9c21-c0b47e847a47',
-                  'https://www.figma.com/api/mcp/asset/3ff3065d-5242-4b3d-a030-757cb231fdb3',
-                  'https://www.figma.com/api/mcp/asset/ace01c62-5697-4225-b506-2c7dd7d006fd',
-                  'https://www.figma.com/api/mcp/asset/44fded32-3cd5-4e75-9b26-aa55646a98b1',
-                  'https://www.figma.com/api/mcp/asset/e7a072ec-bb59-46c5-9f5e-2e5f83217f63',
-                  'https://www.figma.com/api/mcp/asset/e2832dc2-b005-4e14-a08b-a79efd1e3500',
+                  automataIcon1, automataIcon2, automataIcon3, automataIcon4, automataIcon5,
+                  automataIcon6, automataIcon7, automataIcon8, automataIcon9, automataIcon10,
                 ].map((url, i) => (
                   <div key={i} style={{
                     aspectRatio: '1', borderRadius: '10px',
@@ -807,50 +832,28 @@ export default function AutomataPage() {
               {/* UI composite — group17 (552×640 reference) */}
               <div style={{ position: 'relative', flex: 1, minHeight: '400px' }}>
                 {[
-                  // Asset 102 1 — main auction panel
-                  { url: 'https://www.figma.com/api/mcp/asset/b836e756-666f-4fa6-b379-5208599d117e', t:'1.09%', l:'0%',     w:'41.67%', h:'24.69%', o:1 },
-                  // Asset 108 1 — toggle off
-                  { url: 'https://www.figma.com/api/mcp/asset/a9661a0b-f061-4ca9-b0b0-a5fa92615c0e', t:'0%',    l:'44.93%', w:'19.38%', h:'8.59%',  o:1 },
-                  // Asset 109 1 — toggle on
-                  { url: 'https://www.figma.com/api/mcp/asset/5754b690-7aa4-43b4-8edd-121fa2a3a5ea', t:'8.59%', l:'44.93%', w:'19.38%', h:'8.44%',  o:1 },
-                  // bounty_hover
-                  { url: 'https://www.figma.com/api/mcp/asset/39f7d1ca-22ea-4942-b3c7-9a7e74307610', t:'1.09%', l:'66.49%', w:'19.93%', h:'14.38%', o:1 },
-                  // upgrade_idle
-                  { url: 'https://www.figma.com/api/mcp/asset/d865b6ab-c9dd-4f75-a7bc-8206bd4423b5', t:'0%',    l:'88.77%', w:'9.06%',  h:'7.66%',  o:1 },
-                  // upgrade
-                  { url: 'https://www.figma.com/api/mcp/asset/41f24799-bafd-442b-bed0-ad7a38bd34d6', t:'8.59%', l:'88.77%', w:'9.06%',  h:'7.66%',  o:1 },
-                  // Asset 104 1 — redeem bar
-                  { url: 'https://www.figma.com/api/mcp/asset/f7a0e67f-9890-4539-bd1b-94448063b23d', t:'19.69%',l:'44.02%', w:'53.8%',  h:'12.34%', o:1 },
-                  // withdraw_normal
-                  { url: 'https://www.figma.com/api/mcp/asset/e8a97668-c83b-49a6-b36f-d7675de59b9b', t:'27.97%',l:'0.18%',  w:'20.11%', h:'11.41%', o:1 },
-                  // deposit_normal
-                  { url: 'https://www.figma.com/api/mcp/asset/45775348-0521-4fd9-89cd-f595dd8241c3', t:'27.97%',l:'21.74%', w:'19.93%', h:'11.25%', o:1 },
-                  // back_n
-                  { url: 'https://www.figma.com/api/mcp/asset/58dce6cf-2b0a-4016-b9c7-e6ae89ef3829', t:'34.38%',l:'62.5%',  w:'6.88%',  h:'6.88%',  o:1 },
-                  // next_n
-                  { url: 'https://www.figma.com/api/mcp/asset/76f67b83-6585-4098-9034-bc0ba2ae3169', t:'34.53%',l:'91.3%',  w:'6.52%',  h:'6.56%',  o:1 },
-                  // Asset 416 1 — 200/200
-                  { url: 'https://www.figma.com/api/mcp/asset/d6b2ab66-2040-4302-b3ec-658ad967177d', t:'34.84%',l:'71.92%', w:'16.85%', h:'5.94%',  o:1 },
-                  // Asset 105 1 — items column
-                  { url: 'https://www.figma.com/api/mcp/asset/0a1b7662-2b00-4185-ac4f-5bc6d1f58e00', t:'34.22%',l:'45.47%', w:'13.77%', h:'26.56%', o:1 },
-                  // guide_n
-                  { url: 'https://www.figma.com/api/mcp/asset/604b66d0-fa1c-4183-af27-cd6104d67e61', t:'44.22%',l:'62.5%',  w:'22.28%', h:'6.56%',  o:1 },
-                  // Asset 415 1
-                  { url: 'https://www.figma.com/api/mcp/asset/ffa9b22e-afa9-46c7-9500-b2288a41f277', t:'43.59%',l:'88.77%', w:'7.97%',  h:'7.66%',  o:1 },
-                  // robot 1 — MO-00203 panel
-                  { url: 'https://www.figma.com/api/mcp/asset/6784678a-2584-498c-adff-889e3c479ec9', t:'40.78%',l:'0.18%',  w:'42.93%', h:'19.53%', o:1 },
-                  // play_n
-                  { url: 'https://www.figma.com/api/mcp/asset/cee1d93b-962d-4c29-9585-19427242d5fb', t:'52.81%',l:'62.5%',  w:'22.64%', h:'6.72%',  o:1 },
-                  // ufo
-                  { url: 'https://www.figma.com/api/mcp/asset/99e43743-8eca-4e8c-99fd-6aa0c6ec8e04', t:'52.81%',l:'88.77%', w:'8.51%',  h:'5.78%',  o:1 },
-                  // frame 1 (background, low opacity)
-                  { url: 'https://www.figma.com/api/mcp/asset/615da3c3-6ec4-4549-bed6-edc94a799e40', t:'64.38%',l:'0.18%',  w:'99.82%', h:'7.03%',  o:0.2 },
-                  // frame 2 (foreground)
-                  { url: 'https://www.figma.com/api/mcp/asset/cb535994-2d02-429f-8f06-9a9c2c4b066f', t:'64.38%',l:'0.18%',  w:'99.82%', h:'7.03%',  o:1 },
-                  // Asset 417 1 — UNLOCK panel
-                  { url: 'https://www.figma.com/api/mcp/asset/7b0f4d79-cbaa-44dc-a31c-a926c3ea3e7d', t:'75.47%',l:'0.18%',  w:'48.55%', h:'24.53%', o:1 },
-                  // Asset 417 2 — DEPOSIT panel
-                  { url: 'https://www.figma.com/api/mcp/asset/4ee39592-3007-4fe4-bfea-05152b7ae92e', t:'75.47%',l:'51.45%', w:'48.55%', h:'24.53%', o:1 },
+                  { url: uiAuction,       t:'1.09%', l:'0%',     w:'41.67%', h:'24.69%', o:1 },
+                  { url: uiToggleOff,     t:'0%',    l:'44.93%', w:'19.38%', h:'8.59%',  o:1 },
+                  { url: uiToggleOn,      t:'8.59%', l:'44.93%', w:'19.38%', h:'8.44%',  o:1 },
+                  { url: uiBountyHover,   t:'1.09%', l:'66.49%', w:'19.93%', h:'14.38%', o:1 },
+                  { url: uiUpgradeIdle,   t:'0%',    l:'88.77%', w:'9.06%',  h:'7.66%',  o:1 },
+                  { url: uiUpgrade,       t:'8.59%', l:'88.77%', w:'9.06%',  h:'7.66%',  o:1 },
+                  { url: uiRedeemBar,     t:'19.69%',l:'44.02%', w:'53.8%',  h:'12.34%', o:1 },
+                  { url: uiWithdrawNormal,t:'27.97%',l:'0.18%',  w:'20.11%', h:'11.41%', o:1 },
+                  { url: uiDepositNormal, t:'27.97%',l:'21.74%', w:'19.93%', h:'11.25%', o:1 },
+                  { url: uiBackN,         t:'34.38%',l:'62.5%',  w:'6.88%',  h:'6.88%',  o:1 },
+                  { url: uiNextN,         t:'34.53%',l:'91.3%',  w:'6.52%',  h:'6.56%',  o:1 },
+                  { url: uiCount,         t:'34.84%',l:'71.92%', w:'16.85%', h:'5.94%',  o:1 },
+                  { url: uiItemsCol,      t:'34.22%',l:'45.47%', w:'13.77%', h:'26.56%', o:1 },
+                  { url: uiGuideN,        t:'44.22%',l:'62.5%',  w:'22.28%', h:'6.56%',  o:1 },
+                  { url: ui415,           t:'43.59%',l:'88.77%', w:'7.97%',  h:'7.66%',  o:1 },
+                  { url: uiRobotPanel,    t:'40.78%',l:'0.18%',  w:'42.93%', h:'19.53%', o:1 },
+                  { url: uiPlayN,         t:'52.81%',l:'62.5%',  w:'22.64%', h:'6.72%',  o:1 },
+                  { url: uiUfo,           t:'52.81%',l:'88.77%', w:'8.51%',  h:'5.78%',  o:1 },
+                  { url: uiFrame,         t:'64.38%',l:'0.18%',  w:'99.82%', h:'7.03%',  o:0.2 },
+                  { url: uiFrame,         t:'64.38%',l:'0.18%',  w:'99.82%', h:'7.03%',  o:1 },
+                  { url: uiUnlockPanel,   t:'75.47%',l:'0.18%',  w:'48.55%', h:'24.53%', o:1 },
+                  { url: uiDepositPanel,  t:'75.47%',l:'51.45%', w:'48.55%', h:'24.53%', o:1 },
                 ].map((el, i) => (
                   <img key={i} src={el.url} alt="" style={{
                     position: 'absolute', top: el.t, left: el.l, width: el.w, height: el.h,
@@ -863,10 +866,10 @@ export default function AutomataPage() {
             {/* right column — two stacked panels */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div style={{ borderRadius: '18px', overflow: 'hidden' }}>
-                <img src="https://www.figma.com/api/mcp/asset/2aa76b6d-6f81-4c46-a45d-37b7512c16dc" alt="UI level panel" style={{ width: '100%', display: 'block' }} />
+                <img src={uiLevelPanel} alt="UI level panel" style={{ width: '100%', display: 'block' }} />
               </div>
               <div style={{ borderRadius: '18px', overflow: 'hidden' }}>
-                <img src="https://www.figma.com/api/mcp/asset/5a16235f-691e-4c4a-9397-df1df225be3d" alt="UI leaderboard" style={{ width: '100%', display: 'block' }} />
+                <img src={uiLeaderboard} alt="UI leaderboard" style={{ width: '100%', display: 'block' }} />
               </div>
             </div>
           </div>

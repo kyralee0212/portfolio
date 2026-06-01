@@ -1,46 +1,50 @@
 import { useLayoutEffect } from 'react'
-
-const heroBg = 'https://www.figma.com/api/mcp/asset/134c583b-79b8-45cb-b306-142c3176b1d6'
-const starIcon = 'https://www.figma.com/api/mcp/asset/4c6ed10c-923a-4f6a-bffc-f0107203956d'
+import heroBg from '../assets/images/nugget-hero-bg.png'
+import starIcon from '../assets/images/nugget-star-icon.png'
+import nuggetUi1 from '../assets/images/nugget-ui1.png'
+import nuggetUi2 from '../assets/images/nugget-ui2.png'
+import nuggetUi3 from '../assets/images/nugget-ui3.png'
+import nuggetUi4 from '../assets/images/nugget-ui4.png'
+import nuggetSprite1 from '../assets/images/nugget-sprite1.png'
+import nuggetSprite2 from '../assets/images/nugget-sprite2.png'
+import nuggetSprite3 from '../assets/images/nugget-sprite3.png'
+import nuggetSprite4 from '../assets/images/nugget-sprite4.png'
+import nuggetSprite5 from '../assets/images/nugget-sprite5.png'
+import nuggetSprite6 from '../assets/images/nugget-sprite6.png'
+import nuggetSprite7 from '../assets/images/nugget-sprite7.png'
+import nuggetSprite8 from '../assets/images/nugget-sprite8.png'
+import card1 from '../assets/images/nugget-card1.png'
+import pop1 from '../assets/images/nugget-pop1.png'
+import recycleRanking1 from '../assets/images/nugget-recycle-ranking1.png'
+import withdraw1 from '../assets/images/nugget-withdraw1.png'
 
 const uiEvolution = [
   {
-    num: '01', img: 'https://www.figma.com/api/mcp/asset/34fd01a8-331b-4c07-aa50-af5bafb7ac95',
+    num: '01', img: nuggetUi1,
     title: 'Layout & Foundation',
     desc: 'Established a simple layout structure while defining the overall style and color direction.',
   },
   {
-    num: '02', img: 'https://www.figma.com/api/mcp/asset/5e0a8628-5c52-4c62-881e-6b33f9f339ce',
+    num: '02', img: nuggetUi2,
     title: 'Style Exploration',
     desc: 'Confirmed a pixel-style direction and explored different backgrounds and visual elements.',
   },
   {
-    num: '03', img: 'https://www.figma.com/api/mcp/asset/24ff18df-8017-4d5b-9a83-68d91e30a4c5',
+    num: '03', img: nuggetUi3,
     title: 'Structure & Function',
     desc: 'Finalized layout, positioning, and core features, then began refining detailed components.',
   },
   {
-    num: '04', img: 'https://www.figma.com/api/mcp/asset/fdcdd33a-4b7f-4c68-a208-5a30d3313634',
+    num: '04', img: nuggetUi4,
     title: 'Polish & Interaction',
     desc: 'Refined all elements and implemented animations and modals to achieve both functionality and visual completeness.',
   },
 ]
 
 const spriteImgs = [
-  'https://www.figma.com/api/mcp/asset/da4eb729-3864-4a9f-abe8-b3edf7200256',
-  'https://www.figma.com/api/mcp/asset/7a2ccc27-2b41-49a9-a4f1-f6c0c4cb61fb',
-  'https://www.figma.com/api/mcp/asset/de6da08d-3638-4a3f-9abd-5cc6c2970bca',
-  'https://www.figma.com/api/mcp/asset/bc2d647d-0c75-47e6-8ecb-9c550c15a797',
-  'https://www.figma.com/api/mcp/asset/53da9673-dca0-402e-8d63-e1aab66ec5f7',
-  'https://www.figma.com/api/mcp/asset/255b828c-446c-4142-8508-d62bf41401e4',
-  'https://www.figma.com/api/mcp/asset/4eac7b7e-17e4-4519-b30f-037f901dc2b3',
-  'https://www.figma.com/api/mcp/asset/160fdbff-9726-494a-9bd9-62ae0592c0fe',
+  nuggetSprite1, nuggetSprite2, nuggetSprite3, nuggetSprite4,
+  nuggetSprite5, nuggetSprite6, nuggetSprite7, nuggetSprite8,
 ]
-
-const card1 = 'https://www.figma.com/api/mcp/asset/e7127e1b-9cc0-47fa-8933-5ef05d990f2d'
-const pop1 = 'https://www.figma.com/api/mcp/asset/ef81009e-620b-4359-8daa-4953dc00b1ca'
-const recycleRanking1 = 'https://www.figma.com/api/mcp/asset/40e8eb56-3e21-481b-aaff-479e3d8eff5e'
-const withdraw1 = 'https://www.figma.com/api/mcp/asset/4232e4ee-dad6-4a4d-8eb3-dfebaf06144f'
 
 const stats = [
   { value: '24.8K', label: 'Active Miners' },

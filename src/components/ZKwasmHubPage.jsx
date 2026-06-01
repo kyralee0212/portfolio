@@ -1,39 +1,53 @@
 import { useLayoutEffect } from 'react'
-
-const phoneImg = 'https://www.figma.com/api/mcp/asset/53cbde49-5485-4ba8-a835-97e62112dc68'
-const ellipse1 = 'https://www.figma.com/api/mcp/asset/1f92f5a2-09b8-43f4-9a65-a4d486f462e4'
-const ellipse2 = 'https://www.figma.com/api/mcp/asset/0a8eccbb-ba88-4abf-b096-ea4c6e9d4a39'
+import phoneImg from '../assets/images/zkwasm-phone.png'
+import ellipse1 from '../assets/images/zkwasm-ellipse1.png'
+import ellipse2 from '../assets/images/zkwasm-ellipse2.png'
+import zkwPartnerYZiLabs from '../assets/images/zkwasm-partner-yzilabs.png'
+import zkwPartnerOKG from '../assets/images/zkwasm-partner-okg.png'
+import zkwPartnerHashKey from '../assets/images/zkwasm-partner-hashkey.png'
+import zkwPartnerMirana from '../assets/images/zkwasm-partner-mirana.png'
+import zkwPartnerUnicornVerse from '../assets/images/zkwasm-partner-unicornverse.png'
+import zkwPartnerSevenX from '../assets/images/zkwasm-partner-sevenx.png'
+import zkwFeatVerifiable from '../assets/images/zkwasm-feat-verifiable.png'
+import zkwFeatPerformance from '../assets/images/zkwasm-feat-performance.png'
+import zkwFeatDecentralized from '../assets/images/zkwasm-feat-decentralized.png'
+import zkwFeatWasm from '../assets/images/zkwasm-feat-wasm.png'
+import zkwIllus1 from '../assets/images/zkwasm-illus1.png'
+import zkwIllus2 from '../assets/images/zkwasm-illus2.png'
+import zkwIllus3 from '../assets/images/zkwasm-illus3.png'
+import zkwIllus4 from '../assets/images/zkwasm-illus4.png'
+import zkwIllus5 from '../assets/images/zkwasm-illus5.png'
+import zkwIllus6 from '../assets/images/zkwasm-illus6.png'
+import zkwMockup1 from '../assets/images/zkwasm-mockup1.png'
+import zkwMockup2 from '../assets/images/zkwasm-mockup2.png'
+import zkwMockup3 from '../assets/images/zkwasm-mockup3.png'
 
 const partners = [
-  { img: 'https://www.figma.com/api/mcp/asset/5651206b-016b-4f72-a5b2-5e528b80c276', name: 'YZiLabs' },
-  { img: 'https://www.figma.com/api/mcp/asset/edd8f013-bedd-4c4a-b90c-085a5ff25503', name: 'OKG' },
-  { img: 'https://www.figma.com/api/mcp/asset/48996830-00f0-4e9c-a5e5-ce09e09eb492', name: 'HashKey' },
-  { img: 'https://www.figma.com/api/mcp/asset/f6831107-5552-4208-a8b9-3556dbb4d623', name: 'Mirana' },
-  { img: 'https://www.figma.com/api/mcp/asset/9b1543d5-4d0a-4f85-8474-89853d9da300', name: 'UnicornVerse' },
-  { img: 'https://www.figma.com/api/mcp/asset/427d0644-bf5b-4f79-9922-fb234e71d2f7', name: 'SevenX' },
+  { img: zkwPartnerYZiLabs, name: 'YZiLabs' },
+  { img: zkwPartnerOKG, name: 'OKG' },
+  { img: zkwPartnerHashKey, name: 'HashKey' },
+  { img: zkwPartnerMirana, name: 'Mirana' },
+  { img: zkwPartnerUnicornVerse, name: 'UnicornVerse' },
+  { img: zkwPartnerSevenX, name: 'SevenX' },
 ]
 
 const featureIcons = [
-  { img: 'https://www.figma.com/api/mcp/asset/d39d9208-5f02-4b10-8903-7cec39f1c058', label: 'Fully Verifiable' },
-  { img: 'https://www.figma.com/api/mcp/asset/90b0a119-a199-421d-ae71-a662b70d2496', label: 'High Performance' },
-  { img: 'https://www.figma.com/api/mcp/asset/352ee13d-e02b-4e45-b2fe-5d6ed3136384', label: 'Decentralized' },
-  { img: 'https://www.figma.com/api/mcp/asset/4158cdec-17a8-4a0c-b5fe-1c012551315a', label: 'WASM Ready' },
+  { img: zkwFeatVerifiable, label: 'Fully Verifiable' },
+  { img: zkwFeatPerformance, label: 'High Performance' },
+  { img: zkwFeatDecentralized, label: 'Decentralized' },
+  { img: zkwFeatWasm, label: 'WASM Ready' },
 ]
 
 const illustrations = [
-  { img: 'https://www.figma.com/api/mcp/asset/a2c34545-42ac-4cfb-bafb-d48a170e8302', title: 'Prepare Application Bytecode (WASM)' },
-  { img: 'https://www.figma.com/api/mcp/asset/4dec248b-c365-4cdb-9385-7479eac7a79a', title: 'Run in ZKWASM Virtual Machine' },
-  { img: 'https://www.figma.com/api/mcp/asset/5b334293-ef52-4ec7-b2f0-e0ccc7e7e9b2', title: 'Generate & Batch Proofs' },
-  { img: 'https://www.figma.com/api/mcp/asset/e6778bd7-2569-4160-af51-7c03f420f72b', title: 'Utilize Prover Network' },
-  { img: 'https://www.figma.com/api/mcp/asset/830f970b-21f5-4d45-b0b1-07887a8e236c', title: 'Deploy via ZKWASM Deployment Service' },
-  { img: 'https://www.figma.com/api/mcp/asset/b2043a49-7d6b-41f5-9df1-9f763f31a772', title: 'Launch on ZKWASM Apps (Launchpad)' },
+  { img: zkwIllus1, title: 'Prepare Application Bytecode (WASM)' },
+  { img: zkwIllus2, title: 'Run in ZKWASM Virtual Machine' },
+  { img: zkwIllus3, title: 'Generate & Batch Proofs' },
+  { img: zkwIllus4, title: 'Utilize Prover Network' },
+  { img: zkwIllus5, title: 'Deploy via ZKWASM Deployment Service' },
+  { img: zkwIllus6, title: 'Launch on ZKWASM Apps (Launchpad)' },
 ]
 
-const mockupCards = [
-  'https://www.figma.com/api/mcp/asset/6016e7ab-7343-4efa-b1a2-a2d66dc43c2f',
-  'https://www.figma.com/api/mcp/asset/25304f91-1039-4f83-af93-b3e1db6eddbe',
-  'https://www.figma.com/api/mcp/asset/43f10b40-cb92-4274-bad2-cde7ea0247f9',
-]
+const mockupCards = [zkwMockup1, zkwMockup2, zkwMockup3]
 
 const donutColors = ['#69daff', '#d4c8f2', '#8596ff', '#cf8cff']
 const tokenDist = [

@@ -1,40 +1,42 @@
 import { useLayoutEffect } from 'react'
-
-const heroBg = 'https://www.figma.com/api/mcp/asset/334eb663-9f23-4359-b74b-67b21ad54d57'
+import heroBg from '../assets/images/xiu-hero-bg.png'
+import xiuUi1 from '../assets/images/xiu-ui1.png'
+import xiuUi2 from '../assets/images/xiu-ui2.png'
+import xiuSprite1 from '../assets/images/xiu-sprite1.png'
+import xiuSprite2 from '../assets/images/xiu-sprite2.png'
+import xiuSprite3 from '../assets/images/xiu-sprite3.png'
+import xiuSprite4 from '../assets/images/xiu-sprite4.png'
+import xiuSprite5 from '../assets/images/xiu-sprite5.png'
+import xiuSprite6 from '../assets/images/xiu-sprite6.png'
+import xiuSprite7 from '../assets/images/xiu-sprite7.png'
+import xiuSprite8 from '../assets/images/xiu-sprite8.png'
+import discoDog from '../assets/images/xiu-discodog.png'
+import withdrawPopup from '../assets/images/xiu-withdraw-popup.png'
+import joinMe from '../assets/images/xiu-join-me.png'
+import bar1 from '../assets/images/xiu-bar1.png'
+import lotteryHeat from '../assets/images/xiu-lottery-heat.png'
+import group10 from '../assets/images/xiu-group10.png'
+import goodJob from '../assets/images/xiu-good-job.png'
+import amazing1 from '../assets/images/xiu-amazing1.png'
+import nice1 from '../assets/images/xiu-nice1.png'
 
 const uiEvolution = [
   {
-    img: 'https://www.figma.com/api/mcp/asset/792f5050-9dfb-429a-bb5d-d2d29cdab22c',
+    img: xiuUi1,
     title: '01. Layout & Foundation',
     desc: 'Established a simple layout structure while defining the overall style and color direction.',
   },
   {
-    img: 'https://www.figma.com/api/mcp/asset/a7caa219-8485-4853-835e-5670399fb05d',
+    img: xiuUi2,
     title: '02. Style Exploration',
     desc: 'Confirmed a pixel-style direction and explored different backgrounds and visual elements.',
   },
 ]
 
 const spriteImgs = [
-  'https://www.figma.com/api/mcp/asset/3e035c7c-7cf9-4f6b-a27f-e02d09b11da1',
-  'https://www.figma.com/api/mcp/asset/e048bc58-d36b-44d6-afb7-21aed20166e9',
-  'https://www.figma.com/api/mcp/asset/c9913858-d97b-4303-bd90-4bb34198d822',
-  'https://www.figma.com/api/mcp/asset/a9d17a5e-e027-4c49-b811-928946f2baa4',
-  'https://www.figma.com/api/mcp/asset/7d6faa47-7af5-415d-8cb5-657fd756a03a',
-  'https://www.figma.com/api/mcp/asset/dcda04c2-b71c-4a4b-9e2e-5e6540796b89',
-  'https://www.figma.com/api/mcp/asset/4cd7de7d-8006-4f24-a98b-e0563a900c51',
-  'https://www.figma.com/api/mcp/asset/72c297b4-1230-4e8d-8f40-3a3ec7f3ccd7',
+  xiuSprite1, xiuSprite2, xiuSprite3, xiuSprite4,
+  xiuSprite5, xiuSprite6, xiuSprite7, xiuSprite8,
 ]
-
-const discoDog = 'https://www.figma.com/api/mcp/asset/ba54aa9e-1440-46d4-a0bd-0c63a16b65d0'
-const withdrawPopup = 'https://www.figma.com/api/mcp/asset/2ed548aa-2c27-4224-9726-1a4e107aa456'
-const joinMe = 'https://www.figma.com/api/mcp/asset/df228694-3a3f-450a-bb8f-d0fa2a7b8b97'
-const bar1 = 'https://www.figma.com/api/mcp/asset/bdccf26d-6dc2-406c-9808-ce67f845ae20'
-const lotteryHeat = 'https://www.figma.com/api/mcp/asset/fb4c6a2a-a5e2-4293-bc91-fc694eee310f'
-const group10 = 'https://www.figma.com/api/mcp/asset/8b43ee44-7b43-4354-a5fa-7150afb1e03e'
-const goodJob = 'https://www.figma.com/api/mcp/asset/5d293081-345d-46b3-b876-5312f8ecb2f0'
-const amazing1 = 'https://www.figma.com/api/mcp/asset/490503a6-31a5-444b-9020-4e23763f04e3'
-const nice1 = 'https://www.figma.com/api/mcp/asset/143854f7-d37b-45ec-a177-a147273e7b09'
 
 function goBack() {
   history.pushState(null, '', '#projects')

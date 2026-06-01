@@ -1,10 +1,9 @@
 import { useLayoutEffect } from 'react'
-
-const heroBg = 'https://www.figma.com/api/mcp/asset/1ad66c9b-04a9-446b-81d3-084527a976de'
-const interfaceImg = 'https://www.figma.com/api/mcp/asset/5f9200e9-c094-4071-811a-fb3bffe1a8e4'
-const uiScreen1 = 'https://www.figma.com/api/mcp/asset/f38311d3-812e-4ea0-9c83-2d4f4a8f99e0'
-const uiScreen2 = 'https://www.figma.com/api/mcp/asset/f7e8013a-897c-4bfb-a3cf-112594bab7f9'
-const uiScreen3 = 'https://www.figma.com/api/mcp/asset/95eed621-6a87-43d3-b231-6208cdf9f38b'
+import heroBg from '../assets/images/explore-hero-bg.png'
+import interfaceImg from '../assets/images/explore-interface.png'
+import uiScreen1 from '../assets/images/explore-ui1.png'
+import uiScreen2 from '../assets/images/explore-ui2.png'
+import uiScreen3 from '../assets/images/explore-ui3.png'
 
 const features = [
   {
