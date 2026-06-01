@@ -14,6 +14,51 @@ import blsSketchWeb1 from '../assets/bls-sketch-web1.png'
 import blsSketchWeb2 from '../assets/bls-sketch-web2.png'
 import blsCard7 from '../assets/bls-card7.png'
 import blsEmailSig from '../assets/images/Email signiture.png'
+import mingHeroImg from '../assets/images/ming-hero.png'
+import mingHeroLogoImg from '../assets/images/ming-hero-logo.png'
+import mingLogoImg from '../assets/images/ming-logo.png'
+import mingSketch1Img from '../assets/images/ming-sketch1.png'
+import mingSketch2Img from '../assets/images/ming-sketch2.png'
+import mingColorImg from '../assets/images/ming-color.png'
+import mingFinal1Img from '../assets/images/ming-final1.png'
+import mingFinal2Img from '../assets/images/ming-final2.png'
+import blsHeroImg from '../assets/images/bls-hero.png'
+import blsLogoImg from '../assets/images/bls-logo.png'
+import blsSketch1Img from '../assets/images/bls-sketch1.png'
+import blsSketch2Img from '../assets/images/bls-sketch2.png'
+import blsSketch3Img from '../assets/images/bls-sketch3.png'
+import blsSketch4Img from '../assets/images/bls-sketch4.png'
+import blsColor1Img from '../assets/images/bls-color1.png'
+import blsColor2Img from '../assets/images/bls-color2.png'
+import blsFinalLeftImg from '../assets/images/bls-final-left.png'
+import blsFinalTopRightImg from '../assets/images/bls-final-top-right.png'
+import blsFinalMidRightImg from '../assets/images/bls-final-mid-right.png'
+import blsFinalEmailSigImg from '../assets/images/bls-final-email-sig.png'
+import delpHeroImg from '../assets/images/delp-hero.png'
+import delpLogoImg from '../assets/images/delp-logo.png'
+import delpSketch1Img from '../assets/images/delp-sketch1.png'
+import delpSketch2Img from '../assets/images/delp-sketch2.png'
+import delpFinal1Img from '../assets/images/delp-final1.png'
+import delpFinal2Img from '../assets/images/delp-final2.png'
+import delpFinal3Img from '../assets/images/delp-final3.png'
+import cerHeroImg from '../assets/images/cer-hero.png'
+import cerIconHeroImg from '../assets/images/cer-icon-hero.png'
+import cerLogoImg from '../assets/images/cer-logo.png'
+import cerSketch1Img from '../assets/images/cer-sketch1.png'
+import cerSketch2Img from '../assets/images/cer-sketch2.png'
+import cerRefine1Img from '../assets/images/cer-refine1.png'
+import cerRefine2Img from '../assets/images/cer-refine2.png'
+import cerFinal1Img from '../assets/images/cer-final1.png'
+import cerFinal2Img from '../assets/images/cer-final2.png'
+import cerFinal3Img from '../assets/images/cer-final3.png'
+import euphHeroImg from '../assets/images/euph-hero.png'
+import euphHeroTextImg from '../assets/images/euph-hero-text.png'
+import euphLogoImg from '../assets/images/euph-logo.png'
+import euphFinal1Img from '../assets/images/euph-final1.png'
+import euphFinal2Img from '../assets/images/euph-final2.png'
+import euphCard1Img from '../assets/images/euph-card1.png'
+import euphCard2Img from '../assets/images/euph-card2.png'
+import euphToteImg from '../assets/images/euph-tote.png'
 
 // ── Kawa Ramen ──────────────────────────────────────────────────────────────
 const kawaHero = kawaHeroNew
@@ -27,59 +72,59 @@ const kawaFinal2 = kawaFinal2Img
 const kawaFinal3 = kawaFinal3Img
 
 // ── Ming Wei ─────────────────────────────────────────────────────────────────
-const mingHero = 'https://www.figma.com/api/mcp/asset/0628324c-1272-4321-aaaa-9c50f3123018'
-const mingLogo = 'https://www.figma.com/api/mcp/asset/9b03182a-1dd2-466d-bd27-77dbe425a61a'
-const mingHeroLogo = 'https://www.figma.com/api/mcp/asset/d8c10b20-9cd1-44c0-8bab-8371bc7c21dc'
-const mingSketch1 = 'https://www.figma.com/api/mcp/asset/e1d8bbeb-0011-47e9-958e-779fb8698871'
-const mingSketch2 = 'https://www.figma.com/api/mcp/asset/3abef2cf-1ef3-4178-be02-cdd2f9ff95a0'
-const mingColor = 'https://www.figma.com/api/mcp/asset/bc2bbcc6-fd85-4d6f-be1c-06adc9099609'
-const mingFinal1 = 'https://www.figma.com/api/mcp/asset/2561e285-27a9-43a8-af43-280fe5fc7f69'
-const mingFinal2 = 'https://www.figma.com/api/mcp/asset/ff522882-47b8-48a1-af22-9e07ee9ec2db'
+const mingHero = mingHeroImg
+const mingLogo = mingLogoImg
+const mingHeroLogo = mingHeroLogoImg
+const mingSketch1 = mingSketch1Img
+const mingSketch2 = mingSketch2Img
+const mingColor = mingColorImg
+const mingFinal1 = mingFinal1Img
+const mingFinal2 = mingFinal2Img
 
 // ── Better Lending Solutions ─────────────────────────────────────────────────
-const blsHero = 'https://www.figma.com/api/mcp/asset/5cdb5493-e92f-4422-8e52-f91dca6616ac'
-const blsLogo = 'https://www.figma.com/api/mcp/asset/9884d1e0-85bd-4c1d-a152-b44d451fbaf0'
-const blsSketch1 = 'https://www.figma.com/api/mcp/asset/4de11519-5c4a-4132-ac9b-508cb01473ef'
-const blsSketch2 = 'https://www.figma.com/api/mcp/asset/c32365ed-1c23-4179-ba36-761f1997c574'
-const blsSketch3 = 'https://www.figma.com/api/mcp/asset/a360e45a-2cba-4741-a2c8-2f1702a1393e'
-const blsSketch4 = 'https://www.figma.com/api/mcp/asset/4f352a7f-0105-4879-b800-cbbba9ab7f2d'
-const blsColor1 = 'https://www.figma.com/api/mcp/asset/50666c68-3603-41a5-bf11-bd94f00c4eea'
-const blsColor2 = 'https://www.figma.com/api/mcp/asset/a6c92cad-fb67-4c1a-b99d-f823e8920763'
-const blsFinalLeft = 'https://www.figma.com/api/mcp/asset/074877c1-7a07-4163-bb62-1d64e8bc3b0b'
-const blsFinalTopRight = 'https://www.figma.com/api/mcp/asset/91889f1e-c1ac-4a7b-8be0-6992adc9282c'
-const blsFinalMidRight = 'https://www.figma.com/api/mcp/asset/ff43ea8b-8f11-4d75-899b-c1502b9ede31'
-const blsFinalEmailSig = 'https://www.figma.com/api/mcp/asset/6c8413f7-a06c-4b8a-93bd-22a4f3a2789c'
+const blsHero = blsHeroImg
+const blsLogo = blsLogoImg
+const blsSketch1 = blsSketch1Img
+const blsSketch2 = blsSketch2Img
+const blsSketch3 = blsSketch3Img
+const blsSketch4 = blsSketch4Img
+const blsColor1 = blsColor1Img
+const blsColor2 = blsColor2Img
+const blsFinalLeft = blsFinalLeftImg
+const blsFinalTopRight = blsFinalTopRightImg
+const blsFinalMidRight = blsFinalMidRightImg
+const blsFinalEmailSig = blsFinalEmailSigImg
 
 // ── Delphinus Lab ─────────────────────────────────────────────────────────────
-const delpHero = 'https://www.figma.com/api/mcp/asset/1a5380bd-c629-4e28-95d0-d4d29103b70d'
-const delpLogo = 'https://www.figma.com/api/mcp/asset/afd880b3-78ec-40a0-b49a-4443b3c65704'
-const delpSketch1 = 'https://www.figma.com/api/mcp/asset/627c671b-b3f7-4926-8a68-d24ee7aa61e5'
-const delpSketch2 = 'https://www.figma.com/api/mcp/asset/14128449-6a01-41e3-b8f1-9dba8db1353b'
-const delpFinal1 = 'https://www.figma.com/api/mcp/asset/e0dc88c4-239c-417b-a042-b2b0c649f081'
-const delpFinal2 = 'https://www.figma.com/api/mcp/asset/81286954-c7e0-4072-a04f-2fb9aa0f9239'
-const delpFinal3 = 'https://www.figma.com/api/mcp/asset/1c089986-cfcb-4de9-871a-c511742f27b3'
+const delpHero = delpHeroImg
+const delpLogo = delpLogoImg
+const delpSketch1 = delpSketch1Img
+const delpSketch2 = delpSketch2Img
+const delpFinal1 = delpFinal1Img
+const delpFinal2 = delpFinal2Img
+const delpFinal3 = delpFinal3Img
 
 // ── Cereals Cat ──────────────────────────────────────────────────────────────
-const cerHero = 'https://www.figma.com/api/mcp/asset/70301f66-9b55-4ae9-bc2c-de8183ec7c1b'
-const cerIconHero = 'https://www.figma.com/api/mcp/asset/055b190c-c8dd-4d03-abc0-d55b2bb416b3'
-const cerLogo = 'https://www.figma.com/api/mcp/asset/9eccee1e-5e75-493a-ac8b-51fd11cd561e'
-const cerSketch1 = 'https://www.figma.com/api/mcp/asset/26721654-04dd-4935-8885-60fab794ef5f'
-const cerSketch2 = 'https://www.figma.com/api/mcp/asset/d79b47ac-e0e3-498d-a75c-359d7eba56b8'
-const cerRefine1 = 'https://www.figma.com/api/mcp/asset/5cfde055-52dc-4813-8d88-d68260bd7acf'
-const cerRefine2 = 'https://www.figma.com/api/mcp/asset/f3c694cc-36ca-40dc-b3d2-44c9e5425bc8'
-const cerFinal1 = 'https://www.figma.com/api/mcp/asset/1965ef67-e569-4eed-a435-f9f333a2ff9e'
-const cerFinal2 = 'https://www.figma.com/api/mcp/asset/3e017b3a-c9cc-47ff-a39f-0616eabda98b'
-const cerFinal3 = 'https://www.figma.com/api/mcp/asset/7ee0ff57-56ea-4e74-b0da-ea170e1b82af'
+const cerHero = cerHeroImg
+const cerIconHero = cerIconHeroImg
+const cerLogo = cerLogoImg
+const cerSketch1 = cerSketch1Img
+const cerSketch2 = cerSketch2Img
+const cerRefine1 = cerRefine1Img
+const cerRefine2 = cerRefine2Img
+const cerFinal1 = cerFinal1Img
+const cerFinal2 = cerFinal2Img
+const cerFinal3 = cerFinal3Img
 
 // ── L'Euphorie ────────────────────────────────────────────────────────────────
-const euphHero = 'https://www.figma.com/api/mcp/asset/64d34e75-2d7b-40df-8579-de82b02e3c5b'
-const euphHeroText = 'https://www.figma.com/api/mcp/asset/2887ea3f-15ad-454f-bb56-62cff91d7a73'
-const euphLogo = 'https://www.figma.com/api/mcp/asset/5b32e054-0a09-402b-af0b-1948a77a0f0d'
-const euphFinal1 = 'https://www.figma.com/api/mcp/asset/8c44e152-c485-4f85-81fb-2cb4ddb05af4'
-const euphFinal2 = 'https://www.figma.com/api/mcp/asset/7714283c-bffe-4988-b595-bfc5cc8b08c0'
-const euphCard1 = 'https://www.figma.com/api/mcp/asset/0fb295cb-c3a9-4391-94b7-204feb77bd79'
-const euphCard2 = 'https://www.figma.com/api/mcp/asset/a6afa806-a69a-468f-b4f3-9611200eb534'
-const euphTote = 'https://www.figma.com/api/mcp/asset/7afb25a2-46b3-4363-8a49-020ca6d28ca7'
+const euphHero = euphHeroImg
+const euphHeroText = euphHeroTextImg
+const euphLogo = euphLogoImg
+const euphFinal1 = euphFinal1Img
+const euphFinal2 = euphFinal2Img
+const euphCard1 = euphCard1Img
+const euphCard2 = euphCard2Img
+const euphTote = euphToteImg
 
 // ─────────────────────────────────────────────────────────────────────────────
 
