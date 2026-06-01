@@ -174,6 +174,7 @@ export default function NuggetPage() {
         <h2 className="font-['Inter',sans-serif] font-bold text-[36px] text-center mb-2" style={{ color: '#e2e4f6' }}>In-game UI Elements</h2>
         <p className="text-center text-[16px] mb-10" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
 
+        <div style={{ background: '#ffffff', borderRadius: 24, padding: 32 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '45% 52%', gap: '3%', alignItems: 'start' }}>
 
           {/* Left column */}
@@ -232,6 +233,7 @@ export default function NuggetPage() {
             <img src={recycleRanking1} alt="Recycle Ranking" style={{ width: '100%', borderRadius: 12 }} />
           </div>
 
+        </div>
         </div>
       </section>
 
