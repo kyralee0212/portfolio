@@ -13,7 +13,9 @@ import nuggetSprite5 from '../assets/images/nugget-sprite5.png'
 import nuggetSprite6 from '../assets/images/nugget-sprite6.png'
 import nuggetSprite7 from '../assets/images/nugget-sprite7.png'
 import nuggetSprite8 from '../assets/images/nugget-sprite8.png'
-import card1 from '../assets/images/nugget-card1.png'
+import cinematicPreview from '../assets/images/nugget-cinematic-preview.png'
+import analyticsGraph from '../assets/images/nugget-analytics-graph.svg'
+import trendArrow from '../assets/images/nugget-trend-arrow.svg'
 import pop1 from '../assets/images/nugget-pop1.png'
 import recycleRanking1 from '../assets/images/nugget-recycle-ranking1.png'
 import withdraw1 from '../assets/images/nugget-withdraw1.png'
@@ -46,13 +48,6 @@ const spriteImgs = [
   nuggetSprite5, nuggetSprite6, nuggetSprite7, nuggetSprite8,
 ]
 
-const stats = [
-  { value: '24.8K', label: 'Active Miners' },
-  { value: '1.2M', label: 'WASM Volume' },
-  { value: '850', label: 'Mined Daily' },
-  { value: '4.2', label: 'Floor Price' },
-]
-
 function goBack() {
   history.pushState(null, '', '#projects')
   window.dispatchEvent(new HashChangeEvent('hashchange'))
@@ -72,16 +67,20 @@ export default function NuggetPage() {
           style={{ color: '#787cde' }}>
           ‹ back
         </button>
-        <span className="font-['Heebo',sans-serif] font-semibold text-[28px]" style={{ color: '#787cde' }}>NUGGET</span>
-        <div style={{ width: 109 }} />
+        <span className="font-['Heebo',sans-serif] font-semibold text-[32px]" style={{ color: '#787cde' }}>NUGGET</span>
+        <a href="mailto:kyralee0212@gmail.com"
+          className="flex items-center justify-center px-8 py-2 rounded-full font-['Heebo',sans-serif] font-medium text-[18px] text-white"
+          style={{ background: 'linear-gradient(11deg, #787cde 20%, #a9cbff 79%)' }}>
+          Work with me
+        </a>
       </div>
 
       {/* Hero */}
       <section className="relative flex items-center justify-center" style={{ height: '100vh', minHeight: 600 }}>
         <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: 'rgba(13,17,23,0.65)' }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(15,23,42,0.69)' }} />
         <div className="absolute inset-0" style={{
-          background: 'radial-gradient(ellipse at 50% 50%, rgba(255,220,60,0.25) 0%, rgba(238,190,35,0) 50%, transparent 100%)'
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(255,220,60,0.28) 0%, rgba(238,190,35,0) 50%, transparent 100%)'
         }} />
         <div className="relative flex flex-col items-center gap-6 text-center px-8">
           <div className="flex items-center gap-2 px-4 py-1.5 rounded-full" style={{ background: '#d8caff' }}>
@@ -90,10 +89,10 @@ export default function NuggetPage() {
               The Future of zkWasm Gaming
             </span>
           </div>
-          <h1 className="font-['Inter',sans-serif] font-bold text-white" style={{ fontSize: 'clamp(64px,10vw,128px)', letterSpacing: '-6px', lineHeight: 1 }}>
+          <h1 className="font-['Inter',sans-serif] font-bold text-white" style={{ fontSize: 'clamp(64px,10vw,128px)', letterSpacing: '-8px', lineHeight: 1 }}>
             NUGGET
           </h1>
-          <p className="font-['Inter',sans-serif] font-medium text-white text-[22px] tracking-[2px] uppercase max-w-[700px]" style={{ opacity: 0.85 }}>
+          <p className="font-['Inter',sans-serif] font-medium text-white text-[22px] tracking-[3px] uppercase max-w-[700px]" style={{ opacity: 0.85 }}>
             Fully responsible for all visual design and art direction, from concept to final assets.
           </p>
           <a href="https://nugget.delphinus.dev" target="_blank" rel="noreferrer"
@@ -104,35 +103,34 @@ export default function NuggetPage() {
         </div>
       </section>
 
-      {/* What is Nugget */}
+      {/* The Essence of Discovery */}
       <section className="section-container py-24">
-        <p className="font-['Space_Grotesk',sans-serif] font-bold text-[13px] tracking-[4px] uppercase mb-4" style={{ color: '#f5c842' }}>
-          Core Protocol
-        </p>
         <div className="flex gap-16 items-center">
-          <div className="flex-1">
-            <h2 className="font-['Space_Grotesk',sans-serif] font-bold text-[56px] leading-[1.1] mb-6" style={{ color: '#f5c842' }}>
-              What is<br />Nugget?
+          <div className="flex-1 flex flex-col gap-8">
+            <h2 className="font-['Manrope',sans-serif] font-bold text-[48px] leading-[1.0] tracking-[-1.2px]" style={{ color: '#e2e4f6' }}>
+              The Essence of Discovery.
             </h2>
             <p className="font-['Inter',sans-serif] font-normal text-[18px] leading-[1.7]" style={{ color: '#a7aabb' }}>
-              Nugget is a mining-based incremental game with clear system feedback and intuitive UI. Players collect and trade mineral NFTs on-chain, competing in a zkWASM-powered marketplace where every transaction is verifiably fair.
+              Nugget isn't just a game; it's a protocol for verifiable digital treasure.
+              We leverage zero-knowledge proofs to ensure that every find is fair,
+              and every asset is truly yours. Our interface is designed to breathe,
+              utilizing atmospheric layers to keep the focus on the hunt.
             </p>
+            <div className="flex gap-8">
+              <div>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[30px] leading-none" style={{ color: '#702ae1' }}>100%</p>
+                <p className="font-['Inter',sans-serif] font-normal text-[14px] tracking-[1.4px] uppercase mt-1" style={{ color: '#a7aabb' }}>Verifiable</p>
+              </div>
+              <div>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[30px] leading-none" style={{ color: '#8b6be8' }}>Sub-sec</p>
+                <p className="font-['Inter',sans-serif] font-normal text-[14px] tracking-[1.4px] uppercase mt-1" style={{ color: '#a7aabb' }}>Latency</p>
+              </div>
+            </div>
           </div>
           <div className="flex-1">
-            <img src={card1} alt="Nugget UI" className="rounded-[18px] w-full object-cover" style={{ maxHeight: 300 }} />
+            <img src={cinematicPreview} alt="Nugget cinematic preview"
+              className="rounded-[18px] w-full object-cover shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]" />
           </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-16" style={{ background: 'rgba(245,200,66,0.05)', borderTop: '1px solid rgba(245,200,66,0.15)', borderBottom: '1px solid rgba(245,200,66,0.15)' }}>
-        <div className="section-container grid grid-cols-4 gap-8 text-center">
-          {stats.map(s => (
-            <div key={s.label}>
-              <p className="font-['Space_Grotesk',sans-serif] font-bold text-[48px]" style={{ color: '#f5c842' }}>{s.value}</p>
-              <p className="font-['Inter',sans-serif] font-normal text-[16px] tracking-[2px] uppercase" style={{ color: '#a7aabb' }}>{s.label}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -173,22 +171,73 @@ export default function NuggetPage() {
         </div>
       </section>
 
-      {/* Retrospective */}
-      <section className="py-16" style={{ background: 'rgba(151,162,235,0.05)' }}>
-        <div className="section-container max-w-[800px]">
-          <p className="font-['Inter',sans-serif] font-bold text-[13px] tracking-[4px] uppercase mb-4" style={{ color: '#97a2eb' }}>Retrospective</p>
-          <p className="font-['Inter',sans-serif] font-light text-[18px] leading-[1.8]" style={{ color: '#a7aabb' }}>
-            Designing for a blockchain game with real economic stakes taught me to treat UI clarity as a trust signal — every ambiguous label is a potential source of user error. If I were to redo this, I would invest more time in edge-case states for the marketplace, especially empty states and loading indicators.
-          </p>
-          <div className="mt-8 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-[14px] flex items-center justify-center" style={{ background: '#6372cf' }}>
-              <span className="text-white font-bold text-[16px]">Y</span>
+      {/* Market Analytics */}
+      <section className="section-container py-16">
+        <div className="relative rounded-[48px] overflow-hidden px-12 pt-12 pb-12"
+          style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.08)' }}>
+
+          {/* Background graph line */}
+          <div className="absolute bottom-0 left-0 right-0 h-1/2 opacity-10 pointer-events-none">
+            <img src={analyticsGraph} alt="" className="w-full h-full object-cover" />
+          </div>
+
+          <div className="relative">
+            <div className="mb-10">
+              <h2 className="font-['Manrope',sans-serif] font-bold text-[48px] tracking-[-1.2px]" style={{ color: '#e2e4f6' }}>
+                Market Analytics
+              </h2>
+              <p className="font-['Inter',sans-serif] font-normal text-[16px] leading-[1.6] mt-2" style={{ color: '#a7aabb' }}>
+                Real-time pulse of the Nugget ecosystem across all luminary clusters.
+              </p>
             </div>
-            <div>
-              <p className="font-['Inter',sans-serif] font-bold text-[16px]" style={{ color: '#e2e4f6' }}>Design Lead</p>
-              <p className="font-['Inter',sans-serif] font-semibold text-[12px] tracking-[2px] uppercase" style={{ color: '#97a2eb' }}>Delphinus Lab</p>
+
+            <div className="grid grid-cols-4 gap-12">
+              {/* Active Miners */}
+              <div className="flex flex-col gap-2">
+                <p className="font-['Inter',sans-serif] font-semibold text-[14px] tracking-[1.4px] uppercase" style={{ color: '#a7aabb' }}>Active Miners</p>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[48px] leading-none" style={{ color: '#702ae1' }}>24.8k</p>
+                <div className="flex items-center gap-1">
+                  <img src={trendArrow} alt="" style={{ width: 13, height: 8 }} />
+                  <span className="font-['Inter',sans-serif] font-semibold text-[12px]" style={{ color: '#16a34a' }}>+12.4%</span>
+                </div>
+              </div>
+              {/* Volume Traded */}
+              <div className="flex flex-col gap-2">
+                <p className="font-['Inter',sans-serif] font-semibold text-[14px] tracking-[1.4px] uppercase" style={{ color: '#a7aabb' }}>Volume Traded</p>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[48px] leading-none" style={{ color: '#e2e4f6' }}>1.2M</p>
+                <p className="font-['Inter',sans-serif] font-normal text-[12px]" style={{ color: '#a7aabb' }}>Total NGT Tokens</p>
+              </div>
+              {/* Mined Daily */}
+              <div className="flex flex-col gap-2">
+                <p className="font-['Inter',sans-serif] font-semibold text-[14px] tracking-[1.4px] uppercase" style={{ color: '#a7aabb' }}>Mined Daily</p>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[48px] leading-none" style={{ color: '#e2e4f6' }}>850</p>
+                <div className="flex items-center gap-1">
+                  <img src={trendArrow} alt="" style={{ width: 13, height: 8 }} />
+                  <span className="font-['Inter',sans-serif] font-semibold text-[12px]" style={{ color: '#16a34a' }}>+30.8%</span>
+                </div>
+              </div>
+              {/* Floor Price */}
+              <div className="flex flex-col gap-2">
+                <p className="font-['Inter',sans-serif] font-semibold text-[14px] tracking-[1.4px] uppercase" style={{ color: '#a7aabb' }}>Floor Price</p>
+                <p className="font-['Manrope',sans-serif] font-extrabold text-[48px] leading-none" style={{ color: '#c9507c' }}>4.2</p>
+                <p className="font-['Inter',sans-serif] font-normal text-[12px]" style={{ color: '#a7aabb' }}>USDT / Artifact</p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Design Audit */}
+      <section className="py-16" style={{ borderTop: '1px solid rgba(151,162,235,0.1)' }}>
+        <div className="section-container" style={{ maxWidth: 1232 }}>
+          <h2 className="font-['Manrope',sans-serif] font-bold text-[48px] tracking-[-1.2px] mb-8" style={{ color: '#e2e4f6' }}>
+            Design Audit.
+          </h2>
+          <p className="font-['Inter',sans-serif] font-normal text-[18px] leading-[1.7]" style={{ color: '#a7aabb' }}>
+            I'm really happy to have completed this game and contributed to generating revenue for the company. It's designed to be simple and easy to understand, while also giving me the chance to explore a new visual style, pixel art, which I hadn't tried before.
+            <br /><br />
+            If I were to revisit this project, I would further improve the colour palette, as it currently feels a bit muted and lacks the vibrant, playful energy typical of games. I would also enhance the motion design by adding more dynamic elements to enrich the overall experience.
+          </p>
         </div>
       </section>
 
