@@ -14,7 +14,7 @@ const projects = [
     description: 'Designed an eastern fantasy cultivation simulation game with system-driven progression',
     images: [imgImage1, imgImage3, imgImage4],
     imgPosition: 'calc(50% - 50px) center',
-    href: '#xiuxian',
+    href: '#',
   },
   {
     title: 'Nugget',
