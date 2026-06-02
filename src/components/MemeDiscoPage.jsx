@@ -13,6 +13,7 @@ import discoSprite6 from '../assets/images/disco-sprite6.png'
 import discoSprite7 from '../assets/images/disco-sprite7.png'
 import discoSprite8 from '../assets/images/disco-sprite8.png'
 import discoDog from '../assets/images/disco-dog.png'
+import xiuDiscoDog from '../assets/images/xiu-discodog.png'
 import withdrawPopup from '../assets/images/disco-withdraw-popup.png'
 import joinMe from '../assets/images/disco-join-me.png'
 import bar1 from '../assets/images/disco-bar1.png'
@@ -94,25 +95,17 @@ export default function MemeDiscoPage() {
 
       {/* What is Memedisco */}
       <section className="section-container py-24">
-        <p className="font-['Space_Grotesk',sans-serif] font-bold text-[13px] tracking-[4px] uppercase mb-4" style={{ color: '#69daff' }}>
-          Core Protocol
-        </p>
         <div className="flex gap-16 items-start">
           <div className="flex-1">
+            <p className="font-['Space_Grotesk',sans-serif] font-bold text-[13px] tracking-[4px] uppercase mb-4" style={{ color: '#69daff' }}>
+              Core Protocol
+            </p>
             <h2 className="font-['Space_Grotesk',sans-serif] font-bold text-[56px] leading-[1.1] mb-6" style={{ color: '#97a2eb' }}>
               What is<br />Memedisco?
             </h2>
             <p className="font-['Inter',sans-serif] font-normal text-[18px] leading-[1.7]" style={{ color: '#a7aabb' }}>
               Memedisco is an interactive on-chain experience focused on character customisation and expressive motion. Players upload meme characters and compete in disco-themed NFT battles powered by zkWASM proofs, with fully transparent and verifiable outcomes on every match.
             </p>
-            <ul className="mt-6 space-y-3">
-              {['Lead designer', 'Interactive UI / Experience Design', 'zkWasm powered gameplay'].map(item => (
-                <li key={item} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#787cde' }} />
-                  <span className="font-['Inter',sans-serif] text-[16px]" style={{ color: '#a7aabb' }}>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
           <div className="flex-1">
             <img src={discoDog} alt="Discodog sprite sheet" className="rounded-[18px] w-full object-cover" />
@@ -126,13 +119,15 @@ export default function MemeDiscoPage() {
         <p className="text-center text-[16px] mb-12" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
         <div className="grid grid-cols-2 gap-8">
           {uiEvolution.map((step, i) => (
-            <div key={i} className="rounded-[32px] overflow-hidden pb-8" style={{ background: 'rgba(220,220,220,0.07)', backdropFilter: 'blur(10px)' }}>
-              <div className="overflow-hidden rounded-t-[32px]" style={{ height: 280 }}>
-                <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
+            <div key={i} className="rounded-[32px] pb-8" style={{ background: 'rgba(220,220,220,0.07)', backdropFilter: 'blur(10px)' }}>
+              <div className="p-[15px] pb-0">
+                <div className="overflow-hidden rounded-[20px]" style={{ height: 313 }}>
+                  <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
+                </div>
               </div>
-              <div className="px-8 pt-6">
+              <div className="px-[15px] pt-6">
                 <h3 className="font-['Manrope',sans-serif] font-bold text-[20px] mb-2" style={{ color: '#e2e4f6' }}>{step.title}</h3>
-                <p className="font-['Inter',sans-serif] font-normal text-[14px] leading-[1.6]" style={{ color: '#9ca3af' }}>{step.desc}</p>
+                <p className="font-['Inter',sans-serif] font-normal text-[14px] leading-[1.6] pl-[22px]" style={{ color: '#9ca3af' }}>{step.desc}</p>
               </div>
             </div>
           ))}
@@ -142,35 +137,48 @@ export default function MemeDiscoPage() {
       {/* In-game UI Elements */}
       <section className="section-container py-16">
         <h2 className="font-['Inter',sans-serif] font-bold text-[36px] text-center mb-2" style={{ color: '#e2e4f6' }}>In-game UI Elements</h2>
-        <p className="text-center text-[16px] mb-12" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
+        <p className="text-center text-[16px] mb-10" style={{ color: '#6b7280' }}>From skeletal wireframes to luminescent high-fidelity interfaces.</p>
 
-        {/* Sprite grid */}
-        <div className="grid grid-cols-4 gap-4 mb-10">
-          {spriteImgs.map((src, i) => (
-            <img key={i} src={src} alt={`sprite ${i + 1}`} className="rounded-[18px] w-full object-cover" style={{ aspectRatio: '1/1' }} />
-          ))}
-        </div>
+        {/* Full-width discodog banner */}
+        <img src={xiuDiscoDog} alt="DiscoDog characters" className="rounded-[18px] w-full object-cover mb-8" />
 
-        {/* Score bar */}
-        <div className="mb-8">
-          <img src={bar1} alt="Score bar" className="rounded-[18px] w-full max-w-[600px] mx-auto block object-cover" />
-        </div>
+        {/* Two-column layout */}
+        <div className="flex gap-6 items-start">
 
-        {/* Bottom UI grid */}
-        <div className="grid grid-cols-3 gap-6 mb-8">
-          <div className="flex flex-col gap-4">
-            <img src={goodJob} alt="Good Job" className="rounded-[18px] w-full object-cover" />
-            <img src={nice} alt="Nice" className="rounded-[18px] w-full object-cover" />
-            <img src={amazing} alt="Amazing" className="rounded-[18px] w-full object-cover" />
+          {/* Left column */}
+          <div className="flex-1 flex flex-col gap-6">
+            {/* Sprite grid in a card */}
+            <div className="rounded-[24px] p-5" style={{ background: 'rgba(220,225,240,0.1)' }}>
+              <div className="grid grid-cols-4 gap-3">
+                {spriteImgs.map((src, i) => (
+                  <img key={i} src={src} alt={`sprite ${i + 1}`} className="rounded-[12px] w-full object-cover" style={{ aspectRatio: '1/1' }} />
+                ))}
+              </div>
+            </div>
+
+            {/* Score bar */}
+            <img src={bar1} alt="Score bar" className="rounded-[18px] w-full object-cover" />
+
+            {/* Bottom row: good-job/nice/amazing + connecting/lottery */}
+            <div className="flex gap-4 items-start">
+              <div className="flex flex-col gap-3" style={{ flex: '0 0 44%' }}>
+                <img src={goodJob} alt="Good Job" className="rounded-[18px] w-full object-cover" />
+                <img src={nice} alt="Nice" className="rounded-[18px] w-full object-cover" />
+                <img src={amazing} alt="Amazing" className="rounded-[18px] w-full object-cover" />
+              </div>
+              <div className="flex flex-col gap-3 flex-1">
+                <img src={group10} alt="Connecting UI" className="rounded-[18px] w-full object-cover" />
+                <img src={lotteryHeat} alt="Lottery Heat" className="rounded-[18px] w-full object-cover" />
+              </div>
+            </div>
           </div>
-          <div>
-            <img src={group10} alt="Connecting UI" className="rounded-[18px] w-full object-cover" />
-            <img src={lotteryHeat} alt="Lottery Heat" className="rounded-[18px] w-full object-cover mt-4" />
-          </div>
-          <div className="flex flex-col gap-4">
+
+          {/* Right column */}
+          <div className="flex-1 flex flex-col gap-6">
             <img src={withdrawPopup} alt="Withdraw Balance" className="rounded-[18px] w-full object-cover" />
             <img src={joinMe} alt="Upload meme" className="rounded-[18px] w-full object-cover" />
           </div>
+
         </div>
       </section>
 
