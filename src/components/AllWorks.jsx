@@ -5,6 +5,7 @@ import {
   imgImage5, imgImage6, imgImage7, imgImage8, imgImage9,
   imgGo
 } from '../assets/figmaAssets'
+import ComingSoonPopup from './ComingSoonPopup'
 
 const projects = [
   {
@@ -59,14 +60,15 @@ function navigate(hash) {
   window.dispatchEvent(new HashChangeEvent('hashchange'))
 }
 
-function ProjectCard({ title, subtitle, description, images, imgPosition, href }) {
+function ProjectCard({ title, subtitle, description, images, imgPosition, href, onWip }) {
   const [hovered, setHovered] = useState(false)
   const isRoute = href && href.startsWith('#') && href.length > 1 && href !== '#projects'
+  const isWip = !isRoute
 
   return (
     <a
       href={href}
-      onClick={isRoute ? e => { e.preventDefault(); navigate(href) } : undefined}
+      onClick={isWip && onWip ? e => { e.preventDefault(); onWip() } : isRoute ? e => { e.preventDefault(); navigate(href) } : undefined}
       className="relative block rounded-[20px] overflow-hidden bg-white flex-shrink-0 cursor-pointer"
       style={{ width: '348px', height: '270px', boxShadow: '0 2px 12px rgba(0,0,0,0.07)' }}
       onMouseEnter={() => setHovered(true)}
@@ -139,6 +141,7 @@ function ProjectCard({ title, subtitle, description, images, imgPosition, href }
 
 export default function AllWorks() {
   const [ref, visible] = useFadeUp()
+  const [showPopup, setShowPopup] = useState(false)
   return (
     <section className="bg-white" style={{ paddingTop: '60px', paddingBottom: '40px' }}>
       <div ref={ref} className={`section-container fade-up${visible ? ' visible' : ''}`}>
@@ -158,10 +161,11 @@ export default function AllWorks() {
           style={{ gridTemplateColumns: 'repeat(3, 348px)' }}
         >
           {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+            <ProjectCard key={p.title} {...p} onWip={() => setShowPopup(true)} />
           ))}
         </div>
       </div>
+      {showPopup && <ComingSoonPopup onClose={() => setShowPopup(false)} />}
     </section>
   )
 }

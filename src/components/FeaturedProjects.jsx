@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { imgStarPurple1, imgIcon, imgNewPlanet1, imgImage2 } from '../assets/figmaAssets'
 import automataVideo from '../assets/automata.mp4'
 import { useFadeUp } from '../hooks/useFadeUp'
+import ComingSoonPopup from './ComingSoonPopup'
 
 function Tag({ label }) {
   return (
@@ -21,13 +22,13 @@ function navigate(hash) {
   window.dispatchEvent(new HashChangeEvent('hashchange'))
 }
 
-function GradientBtn({ children, href = '#' }) {
+function GradientBtn({ children, href = '#', onClick }) {
   const [btn, setBtn] = useState('default')
   const isRoute = href && href.startsWith('#') && href.length > 1
   return (
     <a
       href={href}
-      onClick={isRoute ? e => { e.preventDefault(); navigate(href.slice(1)) } : undefined}
+      onClick={onClick ? e => { e.preventDefault(); onClick() } : isRoute ? e => { e.preventDefault(); navigate(href.slice(1)) } : undefined}
       className="flex items-center justify-center h-[43px] px-[40px] rounded-[59px] font-['Heebo',sans-serif] font-medium text-[18px] whitespace-nowrap w-fit"
       style={{
         background: 'linear-gradient(11deg, rgb(120,124,222) 0%, rgb(169,203,255) 35%, rgb(169,203,255) 65%, rgb(120,124,222) 100%)',
@@ -49,6 +50,7 @@ function GradientBtn({ children, href = '#' }) {
 export default function FeaturedProjects() {
   const [ref1, visible1] = useFadeUp()
   const [ref2, visible2] = useFadeUp()
+  const [showPopup, setShowPopup] = useState(false)
   return (
     <>
       {/* --- AUTOMATA --- */}
@@ -138,7 +140,7 @@ export default function FeaturedProjects() {
               </p>
 
               <div className="mt-2">
-                <GradientBtn>Details</GradientBtn>
+                <GradientBtn onClick={() => setShowPopup(true)}>Details</GradientBtn>
               </div>
             </div>
 
@@ -160,6 +162,8 @@ export default function FeaturedProjects() {
           </div>
         </div>
       </section>
+
+      {showPopup && <ComingSoonPopup onClose={() => setShowPopup(false)} />}
     </>
   )
 }

@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
+import ComingSoonPopup from './ComingSoonPopup'
 import { useFadeUp } from '../hooks/useFadeUp'
 import {
   imgRectangle18, imgRectangle19, imgRectangle20,
@@ -57,12 +58,13 @@ function navigate(hash) {
   window.dispatchEvent(new HashChangeEvent('hashchange'))
 }
 
-function ExploreCard({ img, category, title, imgStyle, imgFit, overlays, bgColor, href = '#' }) {
+function ExploreCard({ img, category, title, imgStyle, imgFit, overlays, bgColor, href = '#', onWip }) {
   const isRoute = href && href.startsWith('#') && href.length > 1
+  const isWip = !isRoute
   return (
     <a
       href={href}
-      onClick={isRoute ? e => { e.preventDefault(); navigate(href) } : undefined}
+      onClick={isWip && onWip ? e => { e.preventDefault(); onWip() } : isRoute ? e => { e.preventDefault(); navigate(href) } : undefined}
       className="relative block flex-shrink-0 cursor-pointer rounded-[20px]"
       style={{
         width: '348px', height: '348px',
@@ -100,7 +102,9 @@ export default function OtherWorks() {
   const [hoveredTab, setHoveredTab] = useState(null)
   const [expanded, setExpanded] = useState(false)
   const [indicator, setIndicator] = useState({ left: 0, width: 0 })
+  const [showPopup, setShowPopup] = useState(false)
   const tabRefs = useRef([])
+  const openPopup = useCallback(() => setShowPopup(true), [])
 
   const [sectionRef, sectionVisible] = useFadeUp()
   const cards = tabs[activeTab].cards
@@ -185,7 +189,7 @@ export default function OtherWorks() {
               }}
             >
               {visible.map((card, i) => (
-                <ExploreCard key={i} {...card} />
+                <ExploreCard key={i} {...card} onWip={openPopup} />
               ))}
             </div>
             {/* Fade gradient — only at very bottom, after the 1/3 peek */}
@@ -214,6 +218,7 @@ export default function OtherWorks() {
           )}
         </div>
       </div>
+      {showPopup && <ComingSoonPopup onClose={() => setShowPopup(false)} />}
     </section>
   )
 }
