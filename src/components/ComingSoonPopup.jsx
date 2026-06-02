@@ -25,13 +25,13 @@ export default function ComingSoonPopup({ onClose }) {
     >
       <div
         className="relative"
-        style={{ width: 627, height: 446, background: '#d9d9d9', borderRadius: 26, flexShrink: 0 }}
+        style={{ width: 439, height: 312, background: '#d9d9d9', borderRadius: 18, flexShrink: 0 }}
         onClick={e => e.stopPropagation()}
       >
         {/* Top image banner */}
         <div
           className="absolute overflow-hidden"
-          style={{ left: 26, top: 31, width: 576, height: 190, borderRadius: 26 }}
+          style={{ left: 18, top: 22, width: 403, height: 133, borderRadius: 18 }}
         >
           <img
             src={popupBg}
@@ -45,13 +45,13 @@ export default function ComingSoonPopup({ onClose }) {
           src={popupAlien}
           alt=""
           className="absolute pointer-events-none"
-          style={{ left: 95, top: 44, width: 169, height: 179, objectFit: 'cover' }}
+          style={{ left: 67, top: 31, width: 118, height: 125, objectFit: 'cover' }}
         />
 
         {/* "Oops" heading */}
         <p
           className="absolute w-full text-center font-['Heebo',sans-serif] font-bold"
-          style={{ top: 230, fontSize: 50, color: '#6372cf', lineHeight: 1 }}
+          style={{ top: 161, fontSize: 35, color: '#6372cf', lineHeight: 1 }}
         >
           Oops
         </p>
@@ -59,7 +59,7 @@ export default function ComingSoonPopup({ onClose }) {
         {/* Subtitle */}
         <p
           className="absolute w-full text-center font-['Heebo',sans-serif] font-medium"
-          style={{ top: 309, fontSize: 24, color: '#000', lineHeight: 1.2 }}
+          style={{ top: 216, fontSize: 17, color: '#000', lineHeight: 1.2 }}
         >
           Still working on it, will be available soon!
         </p>
@@ -67,14 +67,15 @@ export default function ComingSoonPopup({ onClose }) {
         {/* Okay button */}
         <button
           onClick={onClose}
-          className="absolute font-['Heebo',sans-serif] font-medium text-[18px] text-white"
+          className="absolute font-['Heebo',sans-serif] font-medium text-white"
           style={{
             left: '50%',
             transform: 'translateX(-50%)',
-            top: 361,
-            width: 160,
-            height: 43,
-            borderRadius: 59,
+            top: 253,
+            width: 112,
+            height: 30,
+            fontSize: 13,
+            borderRadius: 41,
             border: 'none',
             cursor: 'pointer',
             background: 'linear-gradient(11deg, #787cde 20%, #a9cbff 79%)',
